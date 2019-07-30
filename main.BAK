@@ -1,0 +1,26 @@
+CLOSE ALL
+SET TALK OFF
+SET DEFAULT TO 
+SET DATE GERMAN
+SET CENTURY ON
+SET SAFETY OFF
+&&SET EXACT off
+
+OPEN DATABASE chestionar SHARED
+SET SYSMENU TO default
+SET SYSMENU off
+PUBLIC intrebare,rasp
+PUBLIC idUser
+
+_screen.WindowState = 2
+_screen.BorderStyle = 1
+_SCREEN.ADDOBJECT("image1","image")
+oImage = _SCREEN.image1
+oImage.PICTURE = "poze/logo.png"
+oImage.LEFT = _SCREEN.WIDTH / 2 - oImage.WIDTH / 2
+oImage.TOP  = _SCREEN.HEIGHT / 2 - oImage.HEIGHT / 2
+oImage.VISIBLE = .T.
+DO meniusimplu.mpr
+READ events
+SELECT 1
+
